@@ -1,0 +1,84 @@
+.subscribe {
+    &__text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__title {
+        margin-top: 55px;
+        @include font(600, 18px);
+    }
+
+    &__description {
+        @include font(400, 16px);
+        color: $description;
+        line-height: 158%;
+        margin-top: 20px;
+    }
+
+    &__form {
+        margin-top: 30px;
+    }
+
+    &__input {
+        @include font(400, 13px);
+        padding: 15px 150px 13px 33px;
+        border-radius: 30px 0 0 30px;
+        border: none;
+        transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        outline: none;
+    }
+    &__input:hover{
+        box-shadow: 0 0 10px 5px gray;
+    }
+
+    &__btn {
+        background-color: $btn;
+        padding: 13px 36px 15px 26px;
+        border-radius: 0 30px 30px 0;
+        @include font(500, 16px);
+        color: $title;
+        border: none;
+        transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    &__btn:hover{
+        box-shadow: 0 0 10px 5px gray;
+    }
+
+    &__label {
+        display: flex;
+        align-items: center;
+    }
+
+    &__underform {
+        @include font(400, 13px);
+        line-height: 158%;
+        color: $description;
+        margin-top: 35px;
+    }
+}
+@media(max-width:531px){
+    .subscribe{
+        &__btn{
+          padding: 10px 10px 10px 10px;
+        }
+        &__input{
+            padding: 20px 40px;
+        }
+        &__description{
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }
+    }
+}
+@media(max-width:395px){
+    .subscribe{
+        &__underform{
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }
+    }
+}

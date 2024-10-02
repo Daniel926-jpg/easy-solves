@@ -1,0 +1,67 @@
+.projects {
+    margin-top: 100px;
+padding-bottom: 30px;
+    &__text {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    &__card {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 70px;
+    }
+
+    &__title {
+        @include font(700, 36px);
+    }
+
+    &__description {
+        max-width: 730px;
+        @include font(400, 16px);
+        color: $description;
+        line-height: 158%;
+        margin-top: 50px;
+    }
+
+    &__button {
+        display: flex;
+        justify-content: center;
+    }
+    &__btn{
+        border-radius: 30px;
+        padding: 13px 36px 15px 36px;
+        border-radius: 30px;
+        border-style: none;
+        background-color: $btn;
+        @include font(500, 16px);
+        margin-top: 50px;
+        color: $title;
+        transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    &__btn:hover{
+        box-shadow: 0 0 10px 5px gray;
+    }
+}
+@media(max-width:1120px){
+    .projects{
+        &__card{
+            display: flex;
+            flex-wrap: wrap;
+            width: 98%;
+            gap: 20px;
+        }
+    }
+
+}
+@media(max-width:860px){
+    .projects{
+        &__card{
+            display: flex;
+            justify-content: center;
+            width: 98%;
+        }
+    }
+}

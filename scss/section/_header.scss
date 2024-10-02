@@ -1,0 +1,92 @@
+.header {
+    background-image: url(../../imgs/Rectangle.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 900px;
+
+    &__burger {
+        width: 50px;
+        height: 50px;
+        display: none;
+    }
+
+    &__nav {
+        display: flex;
+        justify-content: end;
+        padding-top: 20px;
+        gap: 40px;
+        @include font(500, 16px);
+        padding-bottom: 20px;
+    }
+
+    &__about {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        margin-top: 300px;
+        color: $title;
+    }
+
+    &__title {
+        @include font(500px, 16px);
+    }
+
+    &__description {
+        @include font(800px, 48px);
+        max-width: 829px;
+    }
+
+    &__btn {
+        border-radius: 30px;
+        padding: 13px 36px 15px 36px;
+        border-radius: 30px;
+        border-style: none;
+        background-color: $btn;
+        @include font(500, 16px);
+        margin-top: 50px;
+        color: $title;
+        transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    &__btn:hover {
+        box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.7);
+    }
+
+    a {
+        color: $title;
+    }
+}
+
+@media(max-width: 1140px) {
+    .container {
+        padding: 0 15px;
+    }
+}
+
+@media(max-width: 595px) {
+    .header {
+        &__nav {
+            display: none;
+        }
+    }
+}
+
+@media(max-width:595px) {
+    .header {
+        &__burger {
+            padding-top: 10px;
+            display: block;
+        }
+    }
+}
+
+@media(max-width:595px) {
+    .header {
+        &__about {
+            margin:40px auto;
+        }
+    }
+}

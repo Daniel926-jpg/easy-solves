@@ -1,0 +1,125 @@
+.high {
+    background-color: #F6F6F8;
+margin-top: 50px;
+    &__content {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+    }
+
+    &__title {
+        color: $dark;
+        @include font(700, 36px);
+        display: flex;
+        justify-content: center;
+        margin-top: 152px;
+        max-width: 424px;
+        text-align: left;
+        margin-top: 152px;
+    }
+
+    &__description {
+        max-width: 489px;
+        @include font(400, 16px);
+        color: $description;
+        margin-top: 40px;
+        line-height: 158%;
+    }
+
+    &__about {
+        @include font(500, 16px);
+        color: $btn;
+        margin-top: 30px;
+        text-decoration: underline;
+    }
+
+    &__cards {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 70px;
+    }
+
+    &__card {
+        margin-top: 70px;
+
+        &-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &-title {
+            @include font(400, 36px);
+            color: $dark;
+
+        }
+    }
+
+    &__project {
+        @include font(400, 16px);
+        color: $description;
+    }
+
+    &__img {
+        margin-top: 50px;
+        margin-bottom: 70px;
+        padding: 15px;
+
+    }
+}
+
+@media(max-width:822px) {
+    .high {
+        &__content {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        &__description {
+            display: flex;
+            text-align: center;
+        }
+
+        &__title {
+            margin-top: 100px;
+            display: flex;
+            justify-content: end;
+            text-align: center;
+        }
+        &__about{
+            display: flex;
+            justify-content: center;
+        }
+    }
+}
+
+@media(max-width:536px) {
+    .high {
+        &__img {
+            max-width: 450px;
+        }
+    }
+}
+@media(max-width:468px) {
+    .high {
+        &__img {
+            max-width: 370px;
+        }
+    }
+}
+@media(max-width:660px){
+    .high{
+        &__cards{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+    }
+}
